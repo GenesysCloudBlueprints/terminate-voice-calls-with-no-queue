@@ -1,0 +1,51 @@
+{
+  "name": "GetGenesysCloudPresenceDefinitionLabel",
+  "integrationType": "purecloud-data-actions",
+  "actionType": "custom",
+  "config": {
+    "request": {
+      "requestUrlTemplate": "/api/v2/presence/definitions/${input.presenceDefinitionId}",
+      "requestType": "GET",
+      "headers": {},
+      "requestTemplate": "${input.rawRequest}"
+    },
+    "response": {
+      "translationMap": {
+        "systemPresence": "$.systemPresence",
+        "presenceDefinitionEnglishLabel": "$.['languageLabels'].en"
+      },
+      "translationMapDefaults": {
+        "systemPresence": "Not Found"
+      },
+      "successTemplate": "{\"systemPresence\": ${systemPresence},\"presenceDefinitionEnglishLabel\": ${presenceDefinitionEnglishLabel}}"
+    }
+  },
+  "contract": {
+    "input": {
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "presenceDefinitionId": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "output": {
+      "successSchema": {
+        "type": "object",
+        "properties": {
+          "presenceDefinitionEnglishLabel": {
+            "type": "string"
+          },
+          "systemPresence": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "secure": false
+}

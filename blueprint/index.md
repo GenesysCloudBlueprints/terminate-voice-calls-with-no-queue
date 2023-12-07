@@ -166,7 +166,7 @@ To get a user's presence in Genesys Cloud, you call a Genesys Cloud public API. 
 
 The GC User Presence data actions use the authenticated token that is supplied by the presence GC OAuth Client created in the previous step.
 
-1. From the [update-gc-presence-on-communicate-call-activity-blueprint repo](https://github.com/GenesysCloudBlueprints/update-gc-presence-on-communicate-call-activity-blueprint) GitHub repository, download the GetGenesysCloudUserPresenceDefinition.custom.json file.
+1. From the [update-external-tag-on-communicate-call-blueprint repo](https://github.com/GenesysCloudBlueprints/terminate-voice-calls-with-no-queue/tree/update-external-tag) GitHub repository, download the GetGenesysCloudUserPresenceDefinition.custom.json file.
 
 2. In Genesys Cloud, navigate to **Integrations** > **Actions** and click **Import**.
 
@@ -176,7 +176,7 @@ The GC User Presence data actions use the authenticated token that is supplied b
 
    ![Import the Update Genesys Cloud User Presence data action](images/4BImportFindTeamsUserIdDataAction.png "Import the Update Genesys Cloud User Presence data action")
 
-4. From the [update-gc-presence-on-communicate-call-activity-blueprint repo](https://github.com/GenesysCloudBlueprints/update-gc-presence-on-communicate-call-activity-blueprint) GitHub repository, download the GetGenesysCloudPresenceDefinitionLabel.custom.json file.
+4. From the [update-external-tag-on-communicate-call-blueprint repo](https://github.com/GenesysCloudBlueprints/terminate-voice-calls-with-no-queue/tree/update-external-tag) GitHub repository, download the GetGenesysCloudPresenceDefinitionLabel.custom.json file.
 
 5. In Genesys Cloud, navigate to **Integrations** > **Actions** and click **Import**.
 
@@ -188,7 +188,7 @@ The GC User Presence data actions use the authenticated token that is supplied b
 
 The GC conversation update data action use the authenticated token that is supplied by the conversation GC OAuth Client created in the previous step.
 
-7. From the [update-gc-presence-on-communicate-call-activity-blueprint repo](https://github.com/GenesysCloudBlueprints/update-gc-presence-on-communicate-call-activity-blueprint) GitHub repository, download the PutConversationTag.custom.json file.
+7. From the [update-external-tag-on-communicate-call-blueprint repo](https://github.com/GenesysCloudBlueprints/terminate-voice-calls-with-no-queue/tree/update-external-tag) GitHub repository, download the PutConversationTag.custom.json file.
 
 8. In Genesys Cloud, navigate to **Integrations** > **Actions** and click **Import**.
 
@@ -206,7 +206,7 @@ This solution includes an Architect workflow that use the data actions you just 
 
 Import this workflow to your Genesys Cloud organization.
 
-1. Download the **UpdateExternalTagOnConversation.i3WorkFlow** file from the [update-gc-presence-on-communicate-call-activity-blueprint repo](https://github.com/GenesysCloudBlueprints/update-gc-presence-on-communicate-call-activity-blueprint) GitHub repository.
+1. Download the **UpdateExternalTagOnConversation.i3WorkFlow** file from the [update-external-tag-on-communicate-call-blueprint repo](https://github.com/GenesysCloudBlueprints/terminate-voice-calls-with-no-queue/tree/update-external-tag) GitHub repository.
 
 2. In Genesys Cloud, navigate to **Admin** > **Architect** > **Flows:Workflow** and click **Add**.
 
@@ -249,7 +249,7 @@ To create the Event Orchestration triggers, use an OAuth client to configure aut
 
 After you have created the workflows, create the triggers that call them. You need event orchestration activated in your Genesys Cloud organization and you need Postman running on your machine.
 
-1. From the [update-gc-presence-on-communicate-call-activity-blueprint](https://github.com/GenesysCloudBlueprints/update-gc-presence-on-communicate-call-activity-blueprint) GitHub repository, download the Genesys Cloud Event Orchestration Trigger API's.postman_collection.json file.
+1. From the [update-external-tag-on-communicate-call-blueprint](https://github.com/GenesysCloudBlueprints/terminate-voice-calls-with-no-queue/tree/update-external-tag) GitHub repository, download the Genesys Cloud Event Orchestration Trigger API's.postman_collection.json file.
 
 2. In Postman, click **Import**
 

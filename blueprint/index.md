@@ -15,7 +15,7 @@ When an Architect workflow receives a communicate call trigger, multiple Genesys
 
 The following shows the end-to-end user experience that this solution enables.
 
-![End-to-end user experience](images/GCPresenceUpdateonCommunicateCall.gif "End-to-end user experience")
+![End-to-end user experience](images/GCPutExternalTag.gif "End-to-end user experience")
 
 ## Solution components
 

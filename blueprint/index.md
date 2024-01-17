@@ -13,11 +13,11 @@ This Genesys Cloud Developer Blueprint explains how to set up Genesys Cloud to t
 
 When an Architect workflow receives a Communicate call trigger, multiple Genesys Cloud Public API calls are made to update the conversation with an External Tag and then terminate the call.
 
-![Outbound Communicate call Genesys Cloud user presence flow](images/outbound-communicate-call-workflow.png "Genesys Cloud presence update from an outbound Communicate call")
+![Outbound Communicate call Genesys Cloud flow](images/outbound-communicate-call-workflow.png "Genesys Cloud Outbound Communicate Call")
 
 The following illustration shows the end-to-end user experience that this solution enables.
 
-![End-to-end user experience](images/GCTerminateCommunicateCall.gif "End-to-end user experience")
+![End-to-end user experience](images/TerminateCallNoQueue.gif "End-to-end user experience")
 
 ## Solution components
 

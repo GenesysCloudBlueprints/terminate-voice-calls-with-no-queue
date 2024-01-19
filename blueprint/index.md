@@ -39,7 +39,7 @@ The following illustration shows the end-to-end user experience that this soluti
 
 ### Create custom roles for use with Genesys Cloud OAuth clients
 
-Create a custom role for use with a Genesys Cloud OAuth client with the following permissions:
+Create a custom role for use with a Genesys Cloud OAuth client with the following permissions.
 :::primary
   **Note:** Custom role 2 is only required if you would still like GC users to make Communicate/PBX calls to other GC users.
   :::
@@ -71,7 +71,7 @@ To create a custom role in Genesys Cloud:
 
 To enable a Genesys Cloud data action to make public API requests on behalf of your Genesys Cloud organization, use an OAuth client to configure authentication with Genesys Cloud.
 
-Create an OAuth client for use with the data action integration with the following custom roles:
+Create an OAuth client for use with the data action integration with the following custom roles.
 :::primary
   **Note:** OAuth Client 2 is only required if you would still like GC users to make Communicate/PBX calls to other GC users.
   :::
@@ -142,7 +142,7 @@ Import the following JSON files from the [terminate-voice-calls-with-no-queue re
 * Optional: `Check-Conversation-For-PSTN-Leg.custom.json`
 
 :::primary
-  **Note:** The optional 3rd bullet requires a third data action be imported.  This data action checks to see if the conversation has an external call leg to the PSTN.  Repeat Steps 1-3 below if you'd like to import this optional data action.
+  **Note:** The optional 3rd data action is required if you would still like GC users to make Communicate PBX calls to one another. This data action checks to see if the conversation has an external call leg to the PSTN.  Repeat Steps 1-3 below with the `Check-Conversation-For-PSTN-Leg.custom.json` data action if you'd like to import this optional data action.  Be sure to associate with the Data Action Integration associated with the `Get Conversation Details Public API OAuth Client 2` mentioned earlier in this blueprint.
   :::
 
 Import the `Disconnect-Voice-Call.custom.json` and `Put-Conversation-Tag.custom.json` files and associate with the Terminate Outbound Conversations With No Queue ID data action integration, which uses the Terminate Conversation Public API OAuth client.
@@ -204,8 +204,11 @@ First import this workflow to your Genesys Cloud organization:
 ![Save your workflow](images/ImportedWorkflow1.png "Save your workflow")
 :::primary Note: If you would like to change the External Tag, replace **No Queue** in the **externalTagName** field with the string of your choice. :::
 
+:::primary Note: If you imported the `Terminate Outbound Call Missing Queue with PSTN Call Leg Check.i3WorkFlow` file, your workflow will look like the screenshot below. :::
+
 ![Save your workflow](images/ImportedWorkflow2.png "Save your workflow")
-:::primary Note: If you imported the `Terminate Outbound Call Missing Queue with PSTN Call Leg Check.i3WorkFlow` file, your workflow will look like this. :::
+
+:::primary Note: If you imported the `Terminate Outbound Call Missing Queue with PSTN Call Leg Check.i3WorkFlow` file, your workflow will look like the screenshot above. :::
 
 ## Create the event orchestration triggers
 

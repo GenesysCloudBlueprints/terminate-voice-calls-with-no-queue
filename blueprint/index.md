@@ -13,6 +13,10 @@ This Genesys Cloud Developer Blueprint explains how to set up Genesys Cloud to t
 
 When an Architect workflow receives a Communicate call trigger, multiple Genesys Cloud Public API calls are made to update the conversation with an External Tag and then terminate the call.
 
+:::primary
+  **Note:** Customers leveraging this blueprint MUST provide an alternate e911 solution for their agents as this blueprint cuts off the agents ability to make an outbound PSTN call without associating a queue to the outbound call.
+  :::
+
 ![Outbound Communicate call Genesys Cloud flow](images/outbound-communicate-call-workflow.png "Genesys Cloud Outbound Communicate Call")
 
 The following illustration shows the end-to-end user experience that this solution enables.

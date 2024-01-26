@@ -238,6 +238,10 @@ Create the trigger that invokes the created Architect workflow.
 
       ![Configure Trigger Criteria](images/ConfigureTriggerCriteria.png "Configure Trigger Criteria")
 
+      :::primary Note: If you are interested in allowing PBX calls to other GC users, adding the following criteria to your trigger may allow you to use the simpler `Terminate Outbound Call Missing Queue.i3WorkFlow` file for your Architect workflow.  This will reduce the amount of time between the trigger firing and the call being disconnected.  You can adjust the string in the contains condition to match your business needs.  Especially if your agents are calling specific country codes. :::
+
+      ![Additional Trigger Criteria](images/AdditionalTriggerCriteria.png "Additional Trigger Criteria")
+
 6. From the Trigger single view, set the **Active** toggle to **Active**.  Click **Save**.
 
      ![Activate Trigger](images/ActivateTrigger.png "Activate Trigger")

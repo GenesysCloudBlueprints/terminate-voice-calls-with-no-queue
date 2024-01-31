@@ -1,0 +1,46 @@
+{
+  "name": "Put Conversation Tag",
+  "integrationType": "purecloud-data-actions",
+  "actionType": "custom",
+  "config": {
+    "request": {
+      "requestUrlTemplate": "/api/v2/conversations/${input.conversationId}/tags",
+      "requestType": "PUT",
+      "headers": {
+        "Content-Type": "application/json",
+        "UserAgent": "PureCloudIntegrations/1.0"
+      },
+      "requestTemplate": "{\n  \"externalTag\": \"${input.externalTagName}\"\n}"
+    },
+    "response": {
+      "translationMap": {},
+      "translationMapDefaults": {},
+      "successTemplate": "${rawResult}"
+    }
+  },
+  "contract": {
+    "input": {
+      "inputSchema": {
+        "title": "Input",
+        "type": "object",
+        "properties": {
+          "conversationId": {
+            "type": "string"
+          },
+          "externalTagName": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "output": {
+      "successSchema": {
+        "type": "object",
+        "properties": {},
+        "additionalProperties": true
+      }
+    }
+  },
+  "secure": false
+}

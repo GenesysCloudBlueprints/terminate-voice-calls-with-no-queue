@@ -1,0 +1,49 @@
+{
+  "name": "Check Conversation For PSTN Leg",
+  "integrationType": "purecloud-data-actions",
+  "actionType": "custom",
+  "config": {
+    "request": {
+      "requestUrlTemplate": "/api/v2/analytics/conversations/${input.CONVERSATION_ID}/details",
+      "requestType": "GET",
+      "headers": {},
+      "requestTemplate": "${input.rawRequest}"
+    },
+    "response": {
+      "translationMap": {
+        "externalSegment": "['participants'][?(@.purpose=='external')]['sessions'][?(@.direction=='outbound')].direction"
+      },
+      "translationMapDefaults": {},
+      "successTemplate": "{\"externalSegment\": ${externalSegment}}"
+    }
+  },
+  "contract": {
+    "input": {
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "CONVERSATION_ID": {
+            "type": "string"
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "output": {
+      "successSchema": {
+        "type": "object",
+        "properties": {
+          "externalSegment": {
+            "type": "array",
+            "items": {
+              "title": "externalSegment",
+              "type": "string"
+            }
+          }
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "secure": false
+}

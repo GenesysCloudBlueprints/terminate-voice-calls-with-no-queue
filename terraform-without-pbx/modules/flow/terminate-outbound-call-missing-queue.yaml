@@ -1,5 +1,5 @@
 workflow:
-  name: Terminate Outbound Call Missing Queue
+  name: {{workflow_name}}
   division: Home
   startUpRef: "/workflow/states/state[Initial State_10]"
   defaultLanguage: en-us
@@ -58,9 +58,9 @@ workflow:
                 lit:
                   minutes: 1
               category:
-                Terminate Outbound Conversations With No Queue ID:
+                {{data_action_category}}:
                   dataAction:
-                    Disconnect Voice Call:
+                    {{disconnect_voice_call}}:
                       inputs:
                         conversationId:
                           exp: Flow.conversationId
@@ -97,9 +97,9 @@ workflow:
                 lit:
                   minutes: 1
               category:
-                Terminate Outbound Conversations With No Queue ID:
+                {{data_action_category}}:
                   dataAction:
-                    Put Conversation Tag:
+                    {{put_conversation_tag}}:
                       inputs:
                         conversationId:
                           exp: Flow.conversationId

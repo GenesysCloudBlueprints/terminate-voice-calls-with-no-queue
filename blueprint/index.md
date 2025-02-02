@@ -216,7 +216,7 @@ To create a data action integration in Genesys Cloud:
 
 ### Import the Genesys Cloud data actions
 
-Import the following JSON files from the [terminate-voice-calls-with-no-queue repo](https://github.com/GenesysCloudBlueprints/terminate-voice-calls-with-no-queue/exports) GitHub repository:
+Import the following JSON files from the [terminate-voice-calls-with-no-queue repo](https://github.com/GenesysCloudBlueprints/terminate-voice-calls-with-no-queue/tree/main/exports) GitHub repository:
 * `Disconnect-Voice-Call.custom.json`
 * `Put-Conversation-Tag.custom.json`
 * (Optional) `Check-Conversation-For-PSTN-Leg.custom.json`

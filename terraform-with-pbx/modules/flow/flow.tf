@@ -1,6 +1,5 @@
 resource "genesyscloud_flow" "terminate_outbound_call_missing_queue" {
   filepath          = "${path.module}/terminate-outbound-call-missing-queue-with-pstn-call-leg-check.yaml"
-  file_content_hash = filesha256("${path.module}/terminate-outbound-call-missing-queue-with-pstn-call-leg-check.yaml")
   substitutions = {
     workflow_name                   = var.workflow_name
     data_action_category            = var.data_action_category
